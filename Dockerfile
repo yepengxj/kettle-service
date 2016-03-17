@@ -15,6 +15,9 @@ ADD . /
 RUN unzip pdi-ce-5.0.1-stable.zip \
  && rm pdi-ce-5.0.1-stable.zip \
  && mkdir /.kettle
+ADD https://dev.mysql.com/get/Downloads/Connector-J/mysql-connector-java-5.1.38.tar.gz /
+RUN tar -xzf mysql-connector-java-5.1.38.tar.gz \
+ && mv /mysql-connector-java-5.1.38/mysql-connector-java-5.1.38-bin.jar /data-integration/lib/
 
 WORKDIR /data-integration
 
