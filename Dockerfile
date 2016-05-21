@@ -12,9 +12,10 @@ RUN echo "JAVA_HOME=/usr/lib/jvm/java-7-oracle" >> /etc/environment
 
 ADD http://downloads.sourceforge.net/project/pentaho/Data%20Integration/5.0.1-stable/pdi-ce-5.0.1-stable.zip / 
 ADD . /
-RUN unzip pdi-ce-5.0.1-stable.zip \
- && rm pdi-ce-5.0.1-stable.zip \
- && mkdir /.kettle \
+#RUN unzip pdi-ce-5.0.1-stable.zip \
+# && rm pdi-ce-5.0.1-stable.zip \
+# && mkdir /.kettle \
+RUN mkdir /.kettle \
  && chmod +x /start.sh
 ADD https://dev.mysql.com/get/Downloads/Connector-J/mysql-connector-java-5.1.38.tar.gz /
 RUN tar -xzf mysql-connector-java-5.1.38.tar.gz \
