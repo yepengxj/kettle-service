@@ -20,3 +20,9 @@ oc new-backingserviceinstance postgresqlinst  \
 oc bind postgresqlinst kettle-service
 ```   
 1.  查看kettle镜像中的一个ETL任务
+总体流程
+![总体流程](img/flow.png)
+data_source节点配置
+![](img/mysql.png)
+data_dest节点配置
+![](img/postgreSQL.png)
