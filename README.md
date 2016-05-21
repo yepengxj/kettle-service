@@ -20,12 +20,12 @@ oc new-backingserviceinstance postgresqlinst  \
 oc bind postgresqlinst kettle-service
 ```   
 1.  查看kettle镜像中的一个ETL任务
-trans1.ktr总体流程
-![总体流程](img/flow.png)
-data_source节点配置
-![](img/mysql.png)
-data_dest节点配置
-![](img/postgreSQL.png)
+trans1.ktr总体流程   
+![总体流程](img/flow.png)   
+data_source节点配置   
+![](img/mysql.png)    
+data_dest节点配置   
+![](img/postgreSQL.png)    
 1.  通过kettle http任务执行器执行ETL任务
 ``` 
 curl http://<kettle-service>.app.dataos.io/kettle/executeTrans/?trans=/trans1.ktr
