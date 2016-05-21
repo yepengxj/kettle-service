@@ -1,8 +1,7 @@
 # kettle-service
 FROM ubuntu:14.04
 MAINTAINER Brandon Rice <brice84@gmail.com>
-RUN sed -i "s/http:\/\/httpredir.debian.org/http:\/\/mirrors.aliyun.com/g" /etc/apt/sources.list && \
-    sed -i "s/http:\/\/security.debian.org/http:\/\/mirrors.aliyun.com\/debian-security/g" /etc/apt/sources.list
+RUN sed -i "s/http:\/\/archive.ubuntu.com/http:\/\/mirrors.aliyun.com/g" /etc/apt/sources.list 
 RUN apt-get update -y && apt-get -y install software-properties-common unzip 
 RUN add-apt-repository ppa:webupd8team/java 
 
