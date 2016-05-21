@@ -2,7 +2,7 @@
 FROM ubuntu:14.04
 MAINTAINER Brandon Rice <brice84@gmail.com>
 
-RUN apt-get -y install software-properties-common unzip 
+RUN apt-get update -y && apt-get -y install software-properties-common unzip 
 RUN add-apt-repository ppa:webupd8team/java
 RUN apt-get update 
 
